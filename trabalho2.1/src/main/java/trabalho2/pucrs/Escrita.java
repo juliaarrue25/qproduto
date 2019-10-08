@@ -7,9 +7,12 @@ import java.io.IOException;
 
 public class Escrita {
 	
+	public File file;
+
+
 	public void writeFile(){
 		try {
-			File file = new File("calculos.txt");
+			file = new File("calculos.txt");
 			FileWriter fw;
 			fw = new FileWriter(file.getAbsoluteFile());
 			BufferedWriter bw = new BufferedWriter(fw);

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Leitura {
 	
 	
-	public void leitura() {
+	public Double leitura() {
 		try {
 			ArrayList<ResultFile> result = new ArrayList<ResultFile>();
 			FileReader ler = new FileReader("calculos.txt");
@@ -33,7 +33,7 @@ public class Leitura {
 			}
 			
 			System.out.println(somatorio);
-			
+			return somatorio;
 			
 			
 		} catch (FileNotFoundException e) {
@@ -43,6 +43,7 @@ public class Leitura {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return null;
 	}
 
 }
