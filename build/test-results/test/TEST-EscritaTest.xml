@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EscritaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-12T18:14:11" hostname="paulo-VJF155F11X-B0911B" time="0.004">
+<testsuite name="EscritaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-12T18:22:25" hostname="paulo-VJF155F11X-B0911B" time="0.004">
   <properties/>
   <testcase name="writeInFile()" classname="EscritaTest" time="0.004"/>
   <system-out><![CDATA[1

@@ -32,7 +32,7 @@ public class Leitura {
 
                 somatorio = somatorio + resultFile.getCubo();
             }
-            return new Double("10");
+            return somatorio;
         } catch (IOException ignored) {
             return new Double("0");
         }
