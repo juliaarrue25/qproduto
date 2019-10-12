@@ -14,9 +14,9 @@ public class Escrita {
         return file;
     }
 
-    public void writeFile() {
+    public void writeFile(String fileName) {
         try {
-            file = new File("calculos.txt");
+            file = new File(fileName);
             FileWriter fw;
             fw = new FileWriter(file.getAbsoluteFile());
             BufferedWriter bw = new BufferedWriter(fw);

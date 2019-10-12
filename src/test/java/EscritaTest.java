@@ -9,7 +9,7 @@ public class EscritaTest {
     public void writeInFile() {
         Escrita escrita = new Escrita();
 
-        escrita.writeFile();
+        escrita.writeFile("calculos.txt");
 
         assertTrue(escrita.getFile().exists());
         assertTrue(escrita.getFile().length() > 0);
