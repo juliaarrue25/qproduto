@@ -4,8 +4,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Escrita {
+
     public File file;
 
+    public Escrita() {
+    }
+
+    public File getFile() {
+        return file;
+    }
 
     public void writeFile() {
         try {
@@ -20,7 +27,6 @@ public class Escrita {
 
             bw.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

@@ -1,17 +1,23 @@
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class Leitura {
 
-    public Double leitura() {
+    private ArrayList<ResultFile> result;
+    private Double somatorio;
+
+    public Leitura() {
+        this.result = new ArrayList<>();
+        this.somatorio = new Double("0");
+    }
+
+    public Double calculaSomatorio(String fileName) throws FileNotFoundException {
+        BufferedReader reader = new BufferedReader(new FileReader(fileName));
+        String linha;
         try {
-            ArrayList<ResultFile> result = new ArrayList<ResultFile>();
-            FileReader ler = new FileReader("calculos.txt");
-            BufferedReader reader = new BufferedReader(ler);
-            String linha;
-            Double somatorio = new Double("0");
             while ((linha = reader.readLine()) != null) {
                 String[] numeros = linha.split(":");
                 ResultFile resultFile = new ResultFile(
@@ -26,15 +32,9 @@ public class Leitura {
 
                 somatorio = somatorio + resultFile.getCubo();
             }
-
-            System.out.println(somatorio);
             return somatorio;
-
-
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        } catch (IOException ignored) {
+            return new Double("0");
         }
-        return null;
     }
 }

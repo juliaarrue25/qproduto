@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -7,6 +9,10 @@ public class Application {
 
         Leitura leitura = new Leitura();
 
-        leitura.leitura();
+        try {
+            leitura.calculaSomatorio("calculos.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

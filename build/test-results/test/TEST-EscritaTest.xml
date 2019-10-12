@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EscritaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-09T23:16:38" hostname="paulo-VJF155F11X-B0911B" time="0.003">
+<testsuite name="EscritaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-12T18:14:11" hostname="paulo-VJF155F11X-B0911B" time="0.004">
   <properties/>
-  <testcase name="testApp" classname="EscritaTest" time="0.003"/>
+  <testcase name="writeInFile()" classname="EscritaTest" time="0.004"/>
   <system-out><![CDATA[1
 2
 3

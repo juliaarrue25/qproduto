@@ -1,14 +1,17 @@
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
-public class EscritaTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-    private Escrita escrita = new Escrita();
+public class EscritaTest {
 
-    public void testApp() {
+    @Test
+    public void writeInFile() {
+        Escrita escrita = new Escrita();
+
         escrita.writeFile();
 
-        assertTrue(escrita.file.exists());
-        assertTrue(escrita.file.length() > 0);
+        assertTrue(escrita.getFile().exists());
+        assertTrue(escrita.getFile().length() > 0);
     }
 }

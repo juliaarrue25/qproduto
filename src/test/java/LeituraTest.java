@@ -1,13 +1,22 @@
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
-public class LeituraTest extends TestCase {
+import java.io.FileNotFoundException;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class LeituraTest {
 
     private Leitura leitura = new Leitura();
 
-    public void testApp() {
-
-        Double resultado = leitura.leitura();
-
+    @Test
+    public void shouldReadFileProperly() throws FileNotFoundException {
+        Double resultado = leitura.calculaSomatorio("calculos.txt");
         assertEquals(new Double("3025.0"), resultado);
+    }
+
+    @Test
+    public void shouldThrownFileNotFoundException() {
+        assertThrows(FileNotFoundException.class, () -> leitura.calculaSomatorio("teste123"));
     }
 }
